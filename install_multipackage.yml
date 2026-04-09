@@ -10,6 +10,7 @@
     - zip
     - curl
     - nginx
+    - httpd
 
   - name: Installation of packages on Debain family
     when: ansible_os_family = "Debain"

@@ -1,0 +1,24 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building...'
+                // Add your build commands here
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing nginx status...'
+                sh 'bash test_nginx_status.sh'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying...'
+                // Add your deploy commands here
+            }
+        }
+    }
+}

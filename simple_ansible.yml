@@ -1,0 +1,10 @@
+---
+
+- hosts:  webservers
+  become: true
+  tasks:
+  - name:  Installation of package for nginx 
+    yum: name nginx state = present
+    when ansible_os_family = "Redhat"
+    apt: name nginx state = present
+    when ansible_os_family = "Debian"
